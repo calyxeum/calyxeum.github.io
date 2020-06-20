@@ -1491,8 +1491,8 @@ iframe {
 	background-color: #292929;
 }
 .team-member-picture {
-	width: 100% !important;
-	height: 100% !important;
+	width: 50% !important;
+	height: 50% !important;
 }
 .team-member-text {
 	padding: 30px 30px 60px;
@@ -1923,6 +1923,11 @@ iframe {
  * CONTACT + MAPS
  * ========================================
  */
+ .contact-maps-section {
+
+	background-image: url('../images/backgrounds/contact-bg.jpg');
+ }
+
 .contact-maps-box {
 	position: relative;
 	z-index: 2;
