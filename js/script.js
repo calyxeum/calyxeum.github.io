@@ -394,6 +394,18 @@
 		$window.trigger( 'resize' );
 		$window.trigger( 'scroll' );
 
+		if (localStorage.getItem('age21') === null) {
+			$('#age-modal').modal({backdrop: 'static', keyboard: false});
+		}
+
+		$('#age-yes-button').on('click', function() {
+			localStorage.setItem('age21', true);
+			$('#age-modal').modal('hide');
+		});
+
+		$('#age-no-button').on('click', function() {
+			$('#under-21').show();
+		});
 	});
 
 })( jQuery );

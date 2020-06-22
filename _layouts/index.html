@@ -557,6 +557,27 @@
 		
 		</div>
 
+		<div id="age-modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h4 class="modal-title">Welcome to Calyxeum!</h4>
+				</div>
+				<div class="modal-body">
+				  <p>Are you at least 21?</p>
+				</div>
+				<div class="modal-footer">
+				  <button id="age-yes-button" type="button" class="btn btn-primary">YES</button>
+				  <button id="age-no-button" type="button" class="btn btn-default">NO</button>
+				  <div id="under-21" style="display: none;">
+						<hr />
+						<h4 class="text-danger">Sorry, you must be 21 to continue.</h4>
+				  </div>
+				</div>
+			  </div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		  </div><!-- /.modal -->
+
 		<!-- LIBRARIES JS
 		================================= -->
 		<script src="js/jquery-1.11.2.min.js"></script>
