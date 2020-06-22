@@ -394,12 +394,19 @@
 		$window.trigger( 'resize' );
 		$window.trigger( 'scroll' );
 
-		if (localStorage.getItem('age21') === null) {
+		if (typeof(Storage) !== "undefined") {
+			if (localStorage.getItem('age21') === null) {
+				$('#age-modal').modal({backdrop: 'static', keyboard: false});
+			}
+		 } else {
 			$('#age-modal').modal({backdrop: 'static', keyboard: false});
 		}
 
 		$('#age-yes-button').on('click', function() {
-			localStorage.setItem('age21', true);
+			if (typeof(Storage) !== "undefined") {
+				localStorage.setItem('age21', true);
+			}
+
 			$('#age-modal').modal('hide');
 		});
 
