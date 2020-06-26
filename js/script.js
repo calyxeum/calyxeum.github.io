@@ -350,16 +350,16 @@
 							// custom callback
 							$el.trigger( 'form-ajax-response', response );
 							
+							// success
+							if ( response.ok ) {
+								$el.trigger( 'reset' );
+								$alert.html( 'Your message was successfully sent!' );
+								$alert.addClass( 'alert-success' ).fadeIn( 500 );
+							}
 							// error
-							if ( response.error ) {
+							else {
 								$alert.html( response.message );
 								$alert.addClass( 'alert-danger' ).fadeIn( 500 );
-							}
-							// success
-							else {
-								$el.trigger( 'reset' );
-								$alert.html( response.message );
-								$alert.addClass( 'alert-success' ).fadeIn( 500 );
 							}
 
 							// reset button
