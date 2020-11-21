@@ -78,9 +78,15 @@
             </button>
 
             <!-- HEADER LOGO -->
-            <a class="navbar-logo navbar-brand anchor-link" href="#hero">
-              <img src="images/logos/header-logo.png" alt="CALYXEUM" />
-            </a>
+            {% if page.menu %}
+              <a class="navbar-logo navbar-brand anchor-link" href="#hero">
+                <img src="images/logos/header-logo.png" alt="CALYXEUM" />
+              </a>
+            {% else %}
+              <a class="navbar-logo navbar-brand anchor-link" href="/">
+                <img src="images/logos/header-logo.png" alt="CALYXEUM" />
+              </a>
+            {% endif %}
           </div>
 
           <nav
@@ -90,13 +96,17 @@
             <!-- NAVIGATION LINKS -->
             <ul id="header-nav" class="nav navbar-nav">
               <li><a href="#hero" class="hidden">Top</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#investing">Investing</a></li>
-              <li><a href="#community">Community</a></li>
-              <li><a href="/merch">Merchandise</a></li>
-              <li><a href="#contact-maps">Contact</a></li>
+              {% if page.menu %}
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#investing">Investing</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#contact-maps">Contact</a></li>
+                <li><a href="/merch">Merchandise</a></li>
+              {% else %}
+                <li><a href="/">Home</a></li>
+              {% endif %}
             </ul>
           </nav>
         </div>
